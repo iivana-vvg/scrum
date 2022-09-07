@@ -119,7 +119,7 @@ class ZahtjeviController extends Controller
         
         //Check if post exists before deleting
         if (!isset($zahtjev)){
-            return redirect('/posts')->with('error', 'No Post Found');
+            return redirect('/zahtjevi')->with('error', 'No Post Found');
         }
 
         // Check for correct user
