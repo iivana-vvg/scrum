@@ -36,6 +36,9 @@ use resources\views\auth\login;
 });*/
 
 //da bi koristila auth moras instalirati ui package
+Route::get('/dashboard', [DashboardController::class, 'index']);
+
+
 Auth::routes();
 Route::get('/', [PagesController::class, 'index']);
 Route::get('/funkcionalnosti', 'PagesController@funkcionalnosti');
@@ -45,7 +48,7 @@ Route::get('/inkrementi', 'PagesController@inkrementi');
 
 
 //Route::get('/dashboard', 'DashboardController@index');
-Route::get('/dashboard', [DashboardController::class, 'index']);
+
 Route::get('zahtjevi', [ZahtjeviController::class, 'index']);
 //Route::get('login', [LoginController::class, 'index']);
 
